@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ER-Evaluator Tutorial</title>
+    <link rel="stylesheet" href="/css/style-for-other-pages.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <!-- logo -->
+        <div class="logo">
+          <h2>
+            <a href="http://localhost:5000/tutorial">ER-Evaluator Tutorial</a>
+          </h2>
+        </div>
+
+        <!-- navigation bar -->
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="http://localhost:5000/dashboard">Dashboard</a>
+            </li>
+
+            <li>
+              <a href="http://localhost:5000/tutorial">Tutorial</a>
+            </li>
+            <li>
+              <a
+                href="https://www.guru99.com/er-diagram-tutorial-dbms.html"
+                target="_blank"
+                >Resources</a
+              >
+            </li>
+            <li>
+              <a href="https://www.studiosity.com/" target="_blank">Help</a>
+            </li>
+            <li>
+              <a href="http://localhost:5000/about" target="_blank"
+                >About ER-Evaluator</a
+              >
+            </li>
+
+            <li>
+              <a href="/users/logout" class="btn btn-secondary">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="Tutorial w">
+      <br />
+      <h1>ER-Evaluator:Tutorial</h1>
+      <br />
+
+      <h2>Create and label an entity</h2>
+      <p>
+        <strong>
+          Components can be created by dragging from the component toolbar into
+          the workspace.
+        </strong>
+      </p>
+      <br />
+      <img src="/tutorial/CreateAndLabelAnEntity.gif" />
+
+      <br />
+      <h2>Create and link an attribute</h2>
+
+      <p>
+        <strong
+          >Components can be linked to one another by clicking and dragging from
+          a handle on one component to a handle on another.
+        </strong>
+      </p>
+      <br />
+      <img src="/tutorial/Create and link an attribute.gif" />
+      <br />
+
+      <h2>Create and link a relationship</h2>
+      <br />
+      <img src="/tutorial/Create and link a relationship.gif" />
+      <br />
+      <h2>Deleting a component</h2>
+      <br />
+      <img src="/tutorial/Deleting a component.gif" />
+      <br />
+      <h2>Moving around the canvas</h2>
+      <p>
+        <strong
+          >You can pan the canvas around in two ways: 1) clicking and dragging
+          the middle mouse button, and 2) using the scrollbars.</strong
+        >
+      </p>
+      <br />
+      <img src="/tutorial/Moving around the canvas.gif" />
+      <br />
+      <h2>Zooming</h2>
+
+      <br />
+      <img src="/tutorial/Zooming.gif" />
+      <br />
+      <h2>Undo and Redo</h2>
+      <br />
+      <img src="/tutorial/Undo and Redo.gif" />
+      <br />
+
+      <h2>Checking your solution</h2>
+      <p>
+        <strong>
+          When you want to check how correct your solution is, click the submit
+          answer button. Feedback will appear to the right in the feedback
+          pane.</strong
+        >
+      </p>
+      <br />
+      <img src="/tutorial/Checking your solution.gif" />
+
+      <br />
+      <h2>Selecting a new problem</h2>
+      <p>
+        <strong
+          >You can select a new problem either using the New Problem button
+          (which you go to the next unsolved problem), or by choosing from the
+          drop down menu.</strong
+        >
+      </p>
+      <br />
+      <img src="/tutorial/Selecting a new problem.gif" />
+      <br />
+      <br />
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p id="tutorialInfo"><%= user.name %> is logged in</p>
+      <p id="tutorialCopyright">
+        Copyright &copy; 2020, ER-Evaluator ALL Rights Reserved
+      </p>
+    </footer>
+  </body>
+</html>

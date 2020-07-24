@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - ER-Evaluator</title>
+    <link rel="stylesheet" href="/css/style-for-login.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="left">
+        <div id="showcase">
+          <div class="showcase-content">
+            <h1 class="showcase-text">
+              <strong>
+                Generate your entity relationship diagram and evaluate your
+                design</strong
+              >
+            </h1>
+            <a
+              href="http://localhost:5000/er-tutorial"
+              target="_blank"
+              class="secondary-btn"
+              ><strong>Start a Tutorial</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="right">
+        <div id="signin">
+          <div class="logo">
+            <!-- <img src="" alt="ER-Evaluator" /> -->
+            <h1>ER-Evaluator</h1>
+          </div>
+          <% include ./partials/messages %>
+          <form action="/users/register" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="name"
+                id="name"
+                name="name"
+                class="text-input"
+                placeholder="Enter Name"
+                value="<%= typeof name != 'undefined' ? name : '' %>"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter Email"
+                class="text-input"
+                value="<%= typeof email != 'undefined' ? email : '' %>"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="text-input"
+                placeholder="Create Password"
+                value="<%= typeof password != 'undefined' ? password : '' %>"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password2">Confirm Password</label>
+              <input
+                type="password"
+                id="password2"
+                name="password2"
+                class="text-input"
+                placeholder="Confirm Password"
+                value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+              />
+            </div>
+
+            <button type="submit" class="primary-btn">Register</button>
+          </form>
+          <div class="links">
+            <a href="/users/login"><strong>Have An Account?</strong> </a>
+            <!-- <a href="#">Sign in with company or school</a> -->
+          </div>
+        </div>
+        <footer id="register-footer">
+          <p>Copyright &copy; 2020,ER-Evaluator ALL Rights Reserved</p>
+          <div>
+            <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

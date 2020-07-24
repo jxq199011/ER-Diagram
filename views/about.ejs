@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ER-Diagram Practice Solution</title>
+    <link rel="stylesheet" href="/css/style-for-other-pages.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <!-- logo -->
+        <div class="logo">
+          <h2>
+            <a href="http://localhost:5000/about ">About ER-Evaluator</a>
+          </h2>
+        </div>
+
+        <!-- navigation bar -->
+        <div class="nav">
+          <ul>
+            <li>
+              <a href="http://localhost:5000/dashboard">Dashboard</a>
+            </li>
+
+            <li>
+              <a href="http://localhost:5000/tutorial" target="_blank"
+                >Tutorial</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.guru99.com/er-diagram-tutorial-dbms.html"
+                target="_blank"
+                >Resources</a
+              >
+            </li>
+            <li>
+              <a href="https://www.studiosity.com/" target="_blank">Help</a>
+            </li>
+            <li>
+              <a href="http://localhost:5000/about">About ER-Evaluator</a>
+            </li>
+
+            <li>
+              <a href="/users/logout" class="btn btn-secondary">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="solution w">
+      <br />
+      <h1>About ER-Evaluator</h1>
+
+      <p>
+        <strong>
+          ER-Evaluator, developed by Master of Computing and Innovation (MCI)
+          2020 Project Team 19, with reference to EER-Tutor
+          (https://ictg.cosc.canterbury.ac.nz:8005/eer-tutor/), is an
+          Entity-Relationship (ER) Modelling practice and evaluation tool, for
+          ER Modelling learning. An ER Model describes the structure of a
+          database with the help of an ER Diagram which shows the relationship
+          among entity sets. ER-Evaluator, as an automated evaluation system,
+          can provide students with unlimited practices and instant feedback.
+        </strong>
+      </p>
+      <p>
+        <strong>
+          MCI 2020 Team 19 Supervisor: Ian Edwin Knight Team members: Xinquan
+          Jiang, Qi Long and Minh Anh Hoang
+        </strong>
+      </p>
+
+      <br />
+      <br />
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p id="aboutCopyright">
+        Copyright &copy; 2020, ER-Evaluator ALL Rights Reserved
+      </p>
+
+      <p id="aboutInfo"><%= user.name %> is logged in</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,362 @@
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  display: block;
+  overflow: scroll;
+}
+
+/* .container {
+  min-width: 1440px;
+  margin: auto;
+} */
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #1d2127;
+  min-height: 70px;
+  min-width: 1440px;
+  color: azure;
+}
+
+/* logo */
+
+header .logo {
+  float: left;
+  height: 70px;
+  margin: 0 30px;
+}
+
+header .logo a {
+  color: azure;
+}
+/* selection */
+
+header .choice {
+  margin-top: 20px;
+  margin-left: 10px;
+  float: left;
+  color: azure;
+}
+
+header .choice select {
+  height: 30px;
+  width: 200px;
+  -webkit-appearance: menulist-button;
+}
+
+/* navigation bar */
+
+/* header .nav {
+  min-width: 996px;
+  float: right;
+  margin-top: 20px;
+}
+
+.nav button {
+  width: 120px;
+  height: 30px;
+  line-height: 27px;
+  border: none;
+  border-radius: 10px;
+  background-color: #383e44;
+  margin-right: 15px;
+  cursor: pointer;
+  outline: 0;
+  color: azure;
+  font-size: 15px;
+}
+
+.nav button:hover {
+  height: 34px;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  height: 30px;
+  background-color: #383e44;
+  margin: 0 20px;
+  padding: 0 20px;
+  border-radius: 10px;
+  line-height: 30px;
+  color: azure;
+}
+
+.nav li a:hover {
+  border-top: 2px solid #383e44;
+  border-bottom: 2px solid #383e44;
+} */
+
+/* navigation bar */
+
+header .nav {
+  position: relative;
+  min-width: 996px;
+  float: right;
+  margin-top: 20px;
+  /* margin-left: 30px; */
+}
+
+.nav .theButton {
+  width: 120px;
+  height: 30px;
+  line-height: 27px;
+  border: none;
+  border-radius: 10px;
+  background-color: #383e44;
+  margin-right: 15px;
+  cursor: pointer;
+  outline: 0;
+  color: azure;
+  font-size: 15px;
+}
+
+.nav > ul {
+  display: flex;
+}
+.nav .theButton:hover {
+  height: 34px;
+}
+
+.nav .li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  height: 30px;
+  background-color: #383e44;
+  margin: 0 20px;
+  padding: 0 20px;
+  border-radius: 10px;
+  line-height: 30px;
+  color: azure;
+}
+
+.nav li a:hover {
+  border-top: 2px solid #383e44;
+  border-bottom: 2px solid #383e44;
+}
+
+.nav .head {
+  display: inline-block;
+  position: relative;
+}
+
+.nav span {
+  display: block;
+  cursor: pointer;
+  height: 30px;
+  background-color: #383e44;
+  margin: 0 20px;
+  padding: 0 20px;
+  border-radius: 10px;
+  line-height: 30px;
+  color: azure;
+}
+
+.nav .innerLi button {
+  display: block;
+  height: 30px;
+  background-color: #383e44;
+  margin: 0 20px;
+  padding: 0 20px;
+  border-radius: 10px;
+  line-height: 30px;
+  color: azure;
+}
+
+.nav .downbtn {
+  position: absolute;
+  display: none;
+}
+
+.nav .head:hover .downbtn {
+  display: block;
+}
+
+/* main content area */
+
+.main-content {
+  min-width: 1440px;
+  min-height: 680px;
+  border-bottom: 1px solid #1d2127;
+  background-color: #fff;
+}
+
+/* description */
+
+.main-content .description {
+  float: left;
+  width: 76.93%;
+  height: 180px;
+  overflow: scroll;
+  border-bottom: 1px solid gray;
+  background-color: #fff;
+}
+
+.main-content .description p {
+  margin: 8px 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1d2127;
+}
+
+/* answer */
+
+.main-content .answer {
+  float: right;
+  width: 22.8%;
+  height: 680px;
+  border-left: 1px solid gray;
+  background-color: #fff;
+  /*overflow: hidden;*/
+  overflow: scroll;
+}
+
+.main-content .answer .answerArea {
+  width: 96%;
+  min-height: 660px;
+  margin: 10px 10px;
+  background-color: #fff;
+  /*overflow: scroll;*/
+}
+
+.main-content .answer .answerArea p {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #383e44;
+  /*  overflow: scroll;*/
+}
+
+/*.main-content #CheckAnswerButton {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 70px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #383e44;
+  color: azure;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+}
+
+.main-content #CheckAnswerButton:hover {
+  height: 45px;
+}*/
+
+/* drawBoard */
+
+.main-content .drawBoard {
+  float: left;
+  min-width: 76.93%;
+  height: 499px;
+  background-color: #fff;
+}
+
+.main-content .drawBoard .app-title h1 {
+  background-color: #1d2127;
+}
+
+/* footer */
+
+footer {
+  min-height: 70px;
+  min-width: 1440px;
+  background: #1d2127;
+}
+
+footer p {
+  float: left;
+  margin: 20px 20px;
+  font-size: 20px;
+  color: azure;
+}
+
+footer .submit-area {
+  float: left;
+  height: 70px;
+  margin-left: 100px;
+}
+
+/* Submit Answer and Show Full solution buttons */
+footer button {
+  width: 200px;
+  height: 30px;
+  line-height: 27px;
+  margin-right: 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #383e44;
+  color: azure;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 0;
+}
+
+footer button:hover {
+  height: 35px;
+}
+
+/* ER-Evaluator info */
+.ER-Evaluator-info {
+  min-width: 1440px;
+}
+.ER-Evaluator-info #copyright {
+  float: left;
+  margin-left: 10px;
+  color: #5a6068;
+}
+
+.ER-Evaluator-info #info {
+  float: right;
+  margin-right: 10px;
+  color: #5a6068;
+}
+
+.ER-Evaluator-info #logo {
+  text-align: center;
+}
+.ER-Evaluator-info #logo a {
+  color: #5a6068;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.body::-webkit-scrollbar,
+.main-content .description::-webkit-scrollbar,
+.main-content .answer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.body,
+.main-content .description,
+.main-content .answer {
+  -ms-overflow-style: none;
+}
+
+
+

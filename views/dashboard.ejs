@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>ER-Diagram Practice</title>
+    <link rel="stylesheet" href="/css/style-for-main-page.css" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- <script type="text/javascript" src="/js/html2canvas.min.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="/build/diagram.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+    <!-- theme-specific application CSS  -->
+    <link rel="stylesheet" type="text/css" href="/css/style.modern.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="container">
+          <!-- logo -->
+          <div class="logo">
+            <h2><a href="http://localhost:5000/dashboard">ER-Evaluator</a></h2>
+          </div>
+
+          <!-- selection -->
+          <div class="choice">
+            <select name="questions" v-model="currentForm">
+              <option v-for="(option,index) in options" :value="option">{{
+                option.text
+              }}</option>
+            </select>
+          </div>
+          <!-- navigation bar -->
+          <div class="nav">
+            <ul>
+              <li>
+                <button class="theButton" @click="theNextProblem();clean(); " onclick="cleanCanvas()">Next Problem</button>
+              </li>
+
+              <li class="head">
+
+              <!-- <li><button onclick="getRecord()" >History</button></li> -->
+
+              <span class="li">History </span>
+              <br />
+              <br />
+              <div class="downbtn">
+                <ul>
+                  <li class="innerLi">
+                    <button onclick="getRecord()">History1</button>
+                  </li>
+                  <li class="innerLi"><button onclick="getRecord2()">History2</button></li>
+                  <li class="innerLi"><button onclick="getRecord3()">History3</button></li>
+                  <li class="innerLi"><button onclick="getRecord4()">History4</button></li>
+                  <li class="innerLi"><button onclick="getRecord5()">History5</button></li>
+                  <li class="innerLi"><button onclick="cleanAll()">CleanAll</button></li>
+
+                </ul>
+              </div>
+
+            </li>
+              <li><a href="http://localhost:5000/tutorial"  target="_blank">Tutorial</a></li>
+              <li>
+                <a
+                  href="https://www.guru99.com/er-diagram-tutorial-dbms.html"
+                  target="_blank"
+                  >Resources</a
+                >
+              </li>
+              <li>
+                <a href="https://www.studiosity.com/" target="_blank">Help</a>
+              </li>
+              <li><a href="http://localhost:5000/about" target="_blank">About ER-Evaluator</a></li>
+
+              <li>
+                <a href="/users/logout" class="btn btn-secondary">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- main-content  -->
+      <section class="main-content">
+        <div class="description">
+          <p>Problem: {{ currentForm.value }}</p>
+        </div>
+
+        <div class="answer">
+          <div class="answerArea">
+            <p id="answerContentTitle">
+              Feedback:
+            </p>
+            <p id="answerContent">
+             
+            </p>
+          </div>
+          <!--  <button id="CheckAnswerButton" type="submit" onclick="validation()">
+            Check Answer
+          </button> -->
+        </div>
+        <div class="drawBoard">
+          <div id="app">
+            <div class="app-header">
+              <div class="app-title">
+                <h1>ERD</h1>
+              </div>
+              <div class="toolbar-container"></div>
+            </div>
+            <div class="app-body">
+              <div class="stencil-container"></div>
+              <div class="paper-container"></div>
+              <div class="inspector-container"></div>
+              <div class="navigator-container"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer>
+        <p><%= user.name %> is logged in</p>
+
+        <button id="CheckAnswerButton" type="submit" @click="getProblemIndex()" onclick="validation()">
+          Submit Answer
+        </button>
+
+        
+
+          <button type="button" @click="getGoodHref()">
+            Show Full Solution
+          </button>
+         
+        </div>
+      </footer>
+      <div class="ER-Evaluator-info">
+        <p id="copyright">
+          Copyright &copy; 2020, ER-Evaluator ALL Rights Reserved
+        </p>
+
+        <p id="info">🐨Group 19 Xinquan Jiang, Minh Anh Hoang, Qi Long</p>
+        <p id="logo">
+          <a href="http://localhost:5000/dashboard">
+            <strong>ER-Evaluator version 8.0</strong></a
+          >
+        </p>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/app-vue.js"></script>
+    <!-- /JointJS dependencies: -->
+    <script src="/node/jquery/dist/jquery.js"></script>
+    <script src="/node/lodash/lodash.js"></script>
+    <script src="/node/backbone/backbone.js"></script>
+    <script src="/node/graphlib/dist/graphlib.core.js"></script>
+    <script src="/node/dagre/dist/dagre.core.js"></script>
+    <script src="/build/diagram.js"></script>
+
+    <!-- Application files:  -->
+    <script src="/js/config/halo.js"></script>
+    <script src="/js/config/selection.js"></script>
+    <script src="/js/config/inspector.js"></script>
+    <script src="/js/config/stencil.js"></script>
+    <script>
+      diagraming();
+    </script>
+    <script src="/js/config/toolbar.js"></script>
+    <script src="/js/views/main.js"></script>
+    <script src="/js/views/error.js"></script>
+    <script src="/js/views/problemData.js"></script>
+    <script>
+      main(_, joint);
+    </script>
+    <script src="/js/models/joint.shapes.app.js"></script>
+    <script src="/js/views/navigator.js"></script>
+
+    <script>
+      joint.setTheme("modern");
+      app = new App.MainView({ el: "#app" });
+    </script>
+  </body>
+</html>
